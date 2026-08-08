@@ -645,8 +645,7 @@ h6 {
 
 .hero-image-wrapper {
   position: absolute;
-  left: 100px;
-  top: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 5;
@@ -655,19 +654,19 @@ h6 {
 
 .hero-woman-img {
   position: absolute;
-  left: 23vw;
+  left: calc(23vw + 100px);
   top: 2vh;
   width: 700px;
   max-width: none;
   height: auto;
   margin: 0;
-  object-fit: contain;
+  display: block;
   transform: none;
 }
 
 .video-preview-card {
   position: absolute;
-  right: 300px;
+  right: 200px;
   top: 48.1vh;
   width: 266px;
   height: 209px;
@@ -690,8 +689,9 @@ h6 {
 }
 
 .video-thumb-img {
+  display: block;
   width: 100%;
-  height: 185px;
+  height: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -1605,7 +1605,7 @@ h6 {
 
 .services-cards-grid {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
 
   gap: 14px;
 
@@ -1645,7 +1645,16 @@ h6 {
 
   transition:
     width .65s cubic-bezier(.22, 1, .36, 1),
+    height .65s cubic-bezier(.22, 1, .36, 1),
     flex-basis .65s cubic-bezier(.22, 1, .36, 1);
+}
+
+.service-card:nth-child(2) {
+  height: 428px;
+}
+
+.service-card:nth-child(3) {
+  height: 378px;
 }
 
 
