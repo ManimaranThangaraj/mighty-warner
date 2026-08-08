@@ -1055,6 +1055,7 @@ h6 {
   .hero-image-wrapper {
     min-height: 200px;
     padding: 6px 0;
+     top: 80px;
   }
 
   .hero-woman-img {
